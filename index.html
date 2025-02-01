@@ -139,21 +139,24 @@
   <section id="osa">
     <h2>OSA</h2>
     <p>Vänligen meddela oss om du kan närvara senast den 31 augusti.</p>
-    <form>
+    <form action="https://formsubmit.co/david.karlslatt@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nytt OSA-svar!">
+      <input type="hidden" name="_captcha" value="false">
+
       <label for="namn">Namn</label>
-      <input type="text" id="namn" name="namn" required>
+      <input type="text" id="namn" name="Namn" required>
 
       <label for="kommer">Kommer du?</label>
-      <select id="kommer" name="kommer" required>
-        <option value="ja">Ja, självklart!</option>
-        <option value="nej">Tyvärr kan jag inte närvara.</option>
+      <select id="kommer" name="Kommer" required>
+        <option value="Ja">Ja, självklart!</option>
+        <option value="Nej">Tyvärr kan jag inte närvara.</option>
       </select>
 
       <label for="specialkost">Specialkost/Allergier</label>
-      <textarea id="specialkost" name="specialkost" rows="3"></textarea>
+      <textarea id="specialkost" name="Specialkost" rows="3"></textarea>
 
       <label for="antal">Totalt antal gäster (inklusive dig)</label>
-      <input type="number" id="antal" name="antal" min="1" required>
+      <input type="number" id="antal" name="Antal gäster" min="1" required>
 
       <button type="submit">Skicka</button>
     </form>
