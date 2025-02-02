@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSA - Irene & Alex Bröllop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Irene & Alex</h1>
+  <p>Välkommen till vårt bröllop!</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="info.html">Information</a></li>
+    <li><a href="osa.html">OSA</a></li>
+    <li><a href="venue.html">Plats</a></li>
+    <li><a href="church.html">Kyrkan</a></li>
+    <li><a href="party.html">Fest</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>OSA</h2>
+  <p>Vänligen meddela oss om du kan närvara senast den 31 augusti.</p>
+  <form action="https://formsubmit.co/wedding@570503625.swh.strato-hosting.eu" method="POST">
+    <input type="hidden" name="_subject" value="Nytt OSA-svar!">
+    <input type="hidden" name="_captcha" value="false">
+    <label for="namn">Namn</label>
+    <input type="text" id="namn" name="Namn" required>
+    <label for="kommer">Kommer du?</label>
+    <select id="kommer" name="Kommer" required>
+      <option value="Ja">Ja, självklart!</option>
+      <option value="Nej">Tyvärr kan jag inte närvara.</option>
+    </select>
+    <label for="specialkost">Specialkost/Allergier</label>
+    <textarea id="specialkost" name="Specialkost" rows="3"></textarea>
+    <label for="antal">Totalt antal gäster (inklusive dig)</label>
+    <input type="number" id="antal" name="Antal gäster" min="1" required>
+    <button type="submit">Skicka</button>
+  </form>
+</section>
+
+<footer>
+  <p>Vi ser fram emot att fira vår speciella dag med dig!</p>
+</footer>
+</body>
+</html>
