@@ -5,69 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Information - Irene & Alex Bröllop</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background: url('images/flower1.png') no-repeat center top;
-      background-size: cover;
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #333;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    .header-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 10px;
-      border-radius: 10px;
-      margin: 10px auto;
-      width: 80%;
-      max-width: 1000px;
-    }
-    .header-text {
-      text-align: left;
-      padding-right: 15px;
-    }
-    .header-text h1 {
-      font-size: 3em;
-      color: #a0522d;
-      margin: 0;
-    }
-    .header-text p {
-      font-size: 1.5em;
-      color: #555;
-      margin: 5px 0;
-    }
-    .header-image img {
-      max-width: 220px;
-      border-radius: 10px;
-    }
-  </style>
 </head>
 <body>
-<div class="header-container">
-  <div class="header-text">
-    <h1>Irene & Alex</h1>
-    <p>Välkommen till vårt bröllop!</p>
-  </div>
-  <div class="header-image">
-    <img src="images/IreneOAlexFinal.jpg" alt="Irene & Alex">
-  </div>
-</div>
-
-<nav>
-  <ul>
-    <li><a href="info.html">Information</a></li>
-    <li><a href="osa.html">OSA</a></li>
-    <li><a href="venue.html">Plats</a></li>
-    <li><a href="church.html">Kyrkan</a></li>
-    <li><a href="party.html">Fest</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
-</nav>
-
+<!-- Load header dynamically -->
+<div id="header-placeholder"></div>
 <section>
   <h2>Välkommen till vårt bröllop!</h2>
   <p>Vi är så glada att få fira vår stora dag med våra nära och kära! Här hittar du all information du behöver för att vara en del av vår speciella dag.</p>
@@ -123,5 +64,12 @@
 <footer>
   <p>Vi ser fram emot att fira vår speciella dag med dig!</p>
 </footer>
+
+<!-- JavaScript to load the header -->
+<script>
+  fetch("header.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
 </body>
 </html>

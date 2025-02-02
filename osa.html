@@ -3,29 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OSA - Irene & Alex Bröllop 2025</title>
+  <title>OSA - Irene & Alex Bröllop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Irene & Alex</h1>
-  <p>Välkommen till vårt bröllop!</p>
-</header>
-
-<nav>
-  <ul>
-    <li><a href="info.html">Information</a></li>
-    <li><a href="osa.html">OSA</a></li>
-    <li><a href="venue.html">Plats</a></li>
-    <li><a href="church.html">Kyrkan</a></li>
-    <li><a href="party.html">Fest</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
-</nav>
+<!-- Load header dynamically -->
+<div id="header-placeholder"></div>
 
 <section>
   <h2>OSA</h2>
-  <p>Vänligen meddela oss om du kan närvara senast den 31 augusti.</p>
+  <p>Vänligen meddela oss om du/ni kan närvara senast den 31 maj 2025</p>
   <form action="https://formsubmit.co/wedding@ireneochalex.se" method="POST">
     <input type="hidden" name="_subject" value="Nytt OSA-svar!">
     <input type="hidden" name="_captcha" value="false">
@@ -34,7 +21,7 @@
     <label for="kommer">Kommer du/ni?</label>
     <select id="kommer" name="Kommer" required>
       <option value="Ja">Ja, självklart!</option>
-      <option value="Nej">Tyvärr kan jag/vi inte närvara.</option>
+      <option value="Nej">Tyvärr kan jag inte närvara.</option>
     </select>
     <label for="specialkost">Specialkost/Allergier</label>
     <textarea id="specialkost" name="Specialkost" rows="3"></textarea>
@@ -47,5 +34,12 @@
 <footer>
   <p>Vi ser fram emot att fira vår speciella dag med dig/er!</p>
 </footer>
+
+<!-- JavaScript to load the header -->
+<script>
+  fetch("header.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
 </body>
 </html>

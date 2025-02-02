@@ -7,21 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Irene & Alex</h1>
-  <p>Välkommen till vårt bröllop!</p>
-</header>
-
-<nav>
-  <ul>
-    <li><a href="info.html">Information</a></li>
-    <li><a href="osa.html">OSA</a></li>
-    <li><a href="venue.html">Plats</a></li>
-    <li><a href="church.html">Kyrkan</a></li>
-    <li><a href="party.html">Fest</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
-</nav>
+<!-- Load header dynamically -->
+<div id="header-placeholder"></div>
 
 <section>
   <h2>Kontakt</h2>
@@ -33,14 +20,21 @@
 <section>
   <h2>Hitta hit</h2>
   <p>Klicka på kartan för att öppna Google Maps.</p>
-
   <!-- Google Maps Embed -->
   <a href="https://www.google.com/maps/place/YOUR+ADDRESS+HERE" target="_blank">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d385.6827808385251!2d18.298388283183847!3d57.64412530660672!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46f7aed377da5bcd%3A0x89196b1d2bde4a35!2sMehlers%20Plats!5e0!3m2!1ssv!2sse!4v1738518653760!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </a>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10499.999999999998!2d18.0686!3d59.3293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMzPCsDE5JzQ1LjUiTiAxOMKwMDQnMDIuOCJF!5e0!3m2!1ssv!2sse!4v1610000000000!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </a>
 </section>
 
 <footer>
-  <p>Vi ser fram emot att fira vår speciella dag med dig!</p>
+  <p>Vi ser fram emot att fira vår speciella dag med dig/er!</p>
 </footer>
+
+<!-- JavaScript to load the header -->
+<script>
+  fetch("header.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
 </body>
 </html>

@@ -1,9 +1,12 @@
+/* Updated CSS for Irene & Alex Wedding Website */
+
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
     background: url('images/flower1.png') no-repeat center center fixed;
     background-size: cover;
+    background-color: rgba(255, 255, 255, 0.9);
     color: #333;
     margin: 0;
     padding: 0;
@@ -13,22 +16,42 @@ body {
     scroll-behavior: smooth;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.85);
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
     border-radius: 10px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 1000px;
 }
 
-header h1 {
+/* Header Text */
+.header-text {
+    text-align: left;
+    padding-right: 15px;
+}
+
+.header-text h1 {
     font-family: 'Parisienne', cursive;
     font-size: 5.0em;
     color: #a0522d;
+    margin: 0;
 }
 
-header p {
+.header-text p {
     font-size: 1.2em;
     color: #555;
+    margin: 5px 0;
+}
+
+/* Header Image */
+.header-image img {
+    max-width: 220px;
+    border-radius: 10px;
 }
 
 nav {
