@@ -1,6 +1,7 @@
 /* Updated CSS for Irene & Alex Wedding Website */
 
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -16,24 +17,37 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Header Container */
 .header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.9);
     padding: 10px;
-    border-radius: 10px;
     margin: 10px auto;
     width: 80%;
     max-width: 1000px;
+    border-radius: 10px;
+
+    /* Gradient fade effect */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.9) 70%,
+    rgba(255, 255, 255, 0) 100%);
 }
 
-/* Header Text */
+
 .header-text {
-    text-align: left;
-    padding-right: 15px;
+    text-align: center; /* Centers all text inside */
 }
+
+.header-text p {
+    font-size: 2em; /* Keep it large and readable */
+    color: #ffffff; /* White text */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for contrast */
+    font-weight: bold;
+    letter-spacing: 1px; /* Adds spacing for clarity */
+    margin-top: 10px; /* Adds some space below "Irene & Alex" */
+}
+
 
 .header-text h1 {
     font-family: 'Parisienne', cursive;
@@ -70,22 +84,27 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 nav ul li a {
+    font-family: 'Tangerine', cursive;
+    font-size: 2em; /* Slightly larger for an elegant feel */
     text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    transition: 0.3s;
-    cursor: pointer;
+    color: #ffffff; /* White text */
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    padding: 10px 15px;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #ffcccb; /* Light romantic pink on hover */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 section {
