@@ -10,4 +10,7 @@
 /modules.xml
 /irex-wedding.iml
 /.idea/*.xml
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
 
