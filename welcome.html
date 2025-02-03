@@ -22,18 +22,6 @@
 </section>
 
 <section>
-  <h2>Schema för dagen</h2>
-  <ul>
-    <li>⏰ 13:30 – Gäster anländer till kyrkan</li>
-    <li>💒 14:00 – Vigseln börjar</li>
-    <li>🥂 15:30 – Mingel & välkomstdrink</li>
-    <li>🍽 17:00 – Bröllopsmiddag</li>
-    <li>💃 20:00 – Fest & dans</li>
-    <li>🎉 01:00 – Tack för ikväll!</li>
-  </ul>
-</section>
-
-<section>
   <h2>Klädkod</h2>
   <p><strong>Klädkod: Kavaj</strong></p>
   <p>Män bär kostym och kvinnor bär klänning, kjol eller byxdress.</p>
@@ -76,11 +64,17 @@
   <p>Vi ser fram emot att fira vår speciella dag med dig/er!</p>
 </footer>
 
-<!-- JavaScript to load the header -->
 <script>
-  fetch("header.html")
-          .then(response => response.text())
-          .then(data => document.getElementById("header-placeholder").innerHTML = data);
+  document.addEventListener("DOMContentLoaded", function() {
+    const headerPlaceholder = document.getElementById("header-placeholder");
+
+    fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+              headerPlaceholder.innerHTML = data;
+            })
+            .catch(error => console.error("Error loading header:", error));
+  });
 </script>
 </body>
 </html>

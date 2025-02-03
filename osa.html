@@ -35,11 +35,17 @@
   <p>Vi ser fram emot att fira vår speciella dag med dig/er!</p>
 </footer>
 
-<!-- JavaScript to load the header -->
 <script>
-  fetch("header.html")
-          .then(response => response.text())
-          .then(data => document.getElementById("header-placeholder").innerHTML = data);
+  document.addEventListener("DOMContentLoaded", function() {
+    const headerPlaceholder = document.getElementById("header-placeholder");
+
+    fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+              headerPlaceholder.innerHTML = data;
+            })
+            .catch(error => console.error("Error loading header:", error));
+  });
 </script>
 </body>
 </html>
