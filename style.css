@@ -21,10 +21,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-    margin: 10px auto;
+    padding: 10px;
+    margin: 5px auto;
     width: 90%; /* Slightly wider */
-    max-width: 1300px; /* Increases the maximum width */
+    max-width: 3500px; /* Increases the maximum width */
     border-radius: 10px;
 
     /* Gradient fade effect - spreads wider */
@@ -193,28 +193,27 @@ footer {
 /* Mobile-friendly styles for screens smaller than 768px */
 @media (max-width: 768px) {
     nav {
-        width: 80%; /* Keep it narrow */
-        margin: 0 auto; /* Center the nav */
-        padding: 6px 0; /* Less padding */
+        width: 90%; /* Slightly wider to fit links */
+        margin: 0 auto; /* Center it */
+        padding: 5px 0; /* Less padding */
     }
 
     nav ul {
         display: flex;
         flex-wrap: nowrap; /* Prevent wrapping */
-        justify-content: center;
-        gap: 10px; /* Add spacing between links */
+        justify-content: space-evenly; /* Distribute space evenly */
+        gap: 5px; /* Reduce gap for better spacing */
     }
 
     nav ul li {
-        margin: 0; /* Remove extra margins */
-        flex: 1 1 auto; /* Allow items to shrink if needed */
+        flex-grow: 1; /* Ensures all links take up equal space */
         text-align: center;
     }
 
     nav ul li a {
-        font-size: 1.2em; /* Reduce font size */
+        font-size: 1em; /* Reduce font size */
         white-space: nowrap; /* Prevent text from breaking */
-        padding: 5px 8px; /* Reduce padding */
+        padding: 3px 6px; /* Less padding */
     }
 
     .header-text h1 {
