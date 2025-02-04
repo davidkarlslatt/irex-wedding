@@ -192,18 +192,26 @@ footer {
 
 /* Mobile-friendly styles for screens smaller than 768px */
 @media (max-width: 768px) {
+    nav {
+        width: 80%; /* Makes the grey nav bar narrower */
+        margin: 0 auto; /* Centers it */
+        padding: 8px 0; /* Less padding for a more compact look */
+    }
+
     nav ul {
-        flex-direction: column; /* Stack menu items vertically */
-        padding: 10px 0;
+        flex-wrap: wrap; /* Allows links to fit next to each other */
+        justify-content: center;
+        display: flex;
     }
 
     nav ul li {
-        margin: 10px 0; /* Adds spacing between menu items */
+        margin: 5px 10px; /* Smaller spacing between links */
+        flex: 1 1 auto; /* Allows the items to adjust dynamically */
     }
 
     nav ul li a {
-        font-size: 1.6em; /* Smaller font size for mobile */
-        padding: 8px 12px;
+        font-size: 1.2em; /* Reduce font size slightly for better fit */
+        padding: 5px 10px; /* Smaller padding for compact design */
     }
 
     .header-text h1 {
