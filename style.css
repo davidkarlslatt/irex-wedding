@@ -216,12 +216,39 @@ footer {
         padding: 3px 6px; /* Less padding */
     }
 
+    .header-container {
+        display: flex;
+        flex-direction: row; /* Keep text and image in one row */
+        align-items: center;
+        justify-content: space-between; /* Space between text and image */
+        padding: 10px;
+    }
+
+    .header-text {
+        flex: 1; /* Allows text to take up available space */
+        text-align: left; /* Keep text aligned left */
+    }
+
     .header-text h1 {
-        font-size: 3.5em; /* Reduce the title size */
+        font-size: 3.8em; /* Keep the title readable */
+        text-align: left;
+        margin-bottom: 5px;
     }
 
     .header-text p {
-        font-size: 1.5em; /* Adjust subtitle size */
+        font-size: 1.6em;
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .header-image {
+        flex: 0 0 auto; /* Prevents image from stretching */
+        margin-left: 15px; /* Adds some spacing */
+    }
+
+    .header-image img {
+        max-width: 150px; /* Reduce image size */
+        height: auto;
     }
 
     section {
