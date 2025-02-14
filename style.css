@@ -5,9 +5,6 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: url('images/rose-flowers.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.9);
     color: #333;
     margin: 0;
     padding: 0;
@@ -15,7 +12,43 @@ body {
     flex-direction: column;
     align-items: center;
     scroll-behavior: smooth;
+    background-color: white;
 }
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 25vw; /* Varje sidobild tar 25% av sidans bredd */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+body::before {
+    left: 0;
+    background-image: url('images/blomster_hoger.png');
+}
+
+body::after {
+    right: 0;
+    background-image: url('images/blomster_venster.png');
+}
+
+.main-content {
+    width: 50vw; /* Mittendelen tar 50% av sidans bredd */
+    max-width: 1400px; /* Justera maxbredd för större skärmar */
+    background: white;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-height: 100vh; /* Se till att mittendelen täcker hela skärmen */
+}
+
+
+
 
 .header-container {
     display: flex;
@@ -188,6 +221,8 @@ footer {
 .hotel-image img {
     max-width: 250px;
     border-radius: 10px;
+    width: 200%; /* Gör bilden dubbelt så bred */
+    height: auto; /* Bevarar bildens proportioner */
 }
 
 /* Mobile-friendly styles for screens smaller than 768px */
