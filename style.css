@@ -82,18 +82,24 @@ body::after {
 }
 
 .header-text p {
-    font-size: 2em; /* Keep it large and readable */
-    color: #ffffff; /* White text */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for contrast */
+    font-size: 2em;
+    color: #555; /* Ändrat från vitt till en mörkare grå */
     font-weight: bold;
-    letter-spacing: 1px; /* Adds spacing for clarity */
-    margin-top: 10px; /* Adds some space below "Irene & Alex" */
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-shadow: none; /* Tar bort skuggan */
 }
 
+.header-text p img {
+    height: 3em; /* Gör får-bilden 300% större */
+    vertical-align: middle; /* Justerar får-bilden så att den linjerar med texten */
+}
+
+
 .header-text h1 {
-    font-family: 'Parisienne', cursive;
-    font-size: 5.0em;
-    color: #a0522d;
+    font-family: 'Tangerine', cursive;
+    font-size: 6.5em; /* 30% större än 5.0em */
+    color: #666666; /* 20% mörkare grå */
     margin: 0;
 }
 
