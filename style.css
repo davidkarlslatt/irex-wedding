@@ -74,6 +74,8 @@ body::after {
     margin-left: 25px; /* Moves image further right */
     #max-width: 220px;
     border-radius: 10px;
+    display: inline-block;
+    background-color: transparent; /* Forces transparency */
 }
 
 
@@ -206,7 +208,7 @@ footer {
     color: #666;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 .hotel {
