@@ -233,47 +233,68 @@ footer {
     height: auto; /* Bevarar bildens proportioner */
 }
 
-/* Mobile-friendly styles for screens smaller than 768px */
 @media (max-width: 768px) {
-    nav {
-        width: 90%; /* Slightly wider to fit links */
-        margin: 0 auto; /* Center it */
-        padding: 5px 0; /* Less padding */
-    }
-
+    /* 1️⃣ NAVIGATION - Alla länkar på en rad med mindre text */
     nav ul {
         display: flex;
-        flex-wrap: nowrap; /* Prevent wrapping */
-        justify-content: space-evenly; /* Distribute space evenly */
-        gap: 5px; /* Reduce gap for better spacing */
+        flex-wrap: nowrap; /* Förhindra radbrytning */
+        justify-content: space-evenly; /* Jämn fördelning */
+        padding: 8px 0;
+        gap: 5px; /* Justera mellanrum */
+        overflow-x: auto; /* Om det behövs, tillåter horisontell scroll */
     }
 
     nav ul li {
-        flex-grow: 1; /* Ensures all links take up equal space */
+        flex: 1 1 auto; /* Låt länkarna ta upp utrymme dynamiskt */
         text-align: center;
     }
 
     nav ul li a {
-        font-size: 1em; /* Reduce font size */
-        white-space: nowrap; /* Prevent text from breaking */
-        padding: 3px 6px; /* Less padding */
+        font-size: 0.93em; /* 15% mindre än tidigare 1.1em */
+        padding: 4px 6px;
+        white-space: nowrap; /* Förhindra radbrytning i länknamnen */
     }
 
+    /* 2️⃣ BODY-TEXT - Minska textstorlek och marginaler */
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section p {
+        font-size: 0.85em; /* Minska 20% */
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input, form textarea, form select {
+        font-size: 0.9em;
+    }
+
+    /* 3️⃣ BODY - Gör att texten inte går kant till kant */
+    section {
+        width: 75%; /* Spara 25% marginal */
+        margin: 20px auto; /* Centrera innehållet */
+        padding: 15px;
+    }
+
+    /* 4️⃣ HEADER - Justera bild och textplacering */
     .header-container {
         display: flex;
-        flex-direction: row; /* Keep text and image in one row */
+        flex-direction: row; /* Håll text och bild i en rad */
         align-items: center;
-        justify-content: space-between; /* Space between text and image */
+        justify-content: space-between; /* Mellanrum mellan text och bild */
         padding: 10px;
     }
 
     .header-text {
-        flex: 1; /* Allows text to take up available space */
-        text-align: left; /* Keep text aligned left */
+        flex: 1; /* Låt texten ta upp tillgängligt utrymme */
+        text-align: left; /* Håll texten vänsterjusterad */
     }
 
     .header-text h1 {
-        font-size: 3.8em; /* Keep the title readable */
+        font-size: 3.8em; /* Justera titeln */
         text-align: left;
         margin-bottom: 5px;
     }
@@ -285,27 +306,23 @@ footer {
     }
 
     .header-image {
-        flex: 0 0 auto; /* Prevents image from stretching */
-        margin-left: 15px; /* Adds some spacing */
+        flex: 0 0 auto; /* Förhindra att bilden sträcker sig */
+        margin-left: 15px; /* Lägg till lite mellanrum */
     }
 
     .header-image img {
-        max-width: 150px; /* Reduce image size */
+        max-width: 150px; /* Gör bilden mindre */
         height: auto;
     }
 
-    section {
-        width: 95%; /* Make content take up more space */
-        padding: 15px;
-    }
-
+    /* 5️⃣ HOTELL-BLOCK - Anpassa layout */
     .hotel {
-        flex-direction: column; /* Stack hotel info for better readability */
+        flex-direction: column; /* Stapla hotell-info för bättre läsbarhet */
         text-align: center;
     }
 
     .hotel-image img {
-        max-width: 100%; /* Make hotel images responsive */
+        max-width: 100%; /* Gör hotellbilder responsiva */
         margin-top: 10px;
     }
 }
